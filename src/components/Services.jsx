@@ -1,11 +1,12 @@
 import React from 'react';
+import singleDwellingImg from '../assets/single_dwelling.png';
 
 const Services = () => {
     const services = [
         {
             title: 'Single Dwelling',
             description: 'Custom-designed luxury homes tailored to your lifestyle. We handle everything from architectural planning to the final coat of paint.',
-            image: './src/assets/single_dwelling.png',
+            image: singleDwellingImg,
         },
         {
             title: 'Multi Dwelling',

@@ -1,4 +1,5 @@
 import React from 'react';
+import heroBg from '../assets/hero_bg.png';
 
 const Hero = () => {
     const heroStyle = {
@@ -7,7 +8,7 @@ const Hero = () => {
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
-        background: 'linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.6)), url("./src/assets/hero_bg.png")',
+        background: `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.6)), url("${heroBg}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         textAlign: 'center',
