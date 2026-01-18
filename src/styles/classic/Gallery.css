@@ -51,3 +51,38 @@
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .galleryGrid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .galleryItem {
+        height: 250px;
+    }
+
+    .galleryOverlay {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .galleryGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .galleryItem {
+        height: 220px;
+    }
+
+    .galleryTitle {
+        font-size: 1.1rem;
+    }
+
+    .galleryLocation {
+        font-size: 0.85rem;
+    }
+}

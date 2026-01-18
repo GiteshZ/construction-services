@@ -71,3 +71,57 @@
     font-size: 1.25rem;
     margin-right: 0.5rem;
 }
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .contactWrapper {
+        gap: 3rem;
+    }
+
+    .contactInfo,
+    .contactForm {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactWrapper {
+        gap: 2rem;
+    }
+
+    .contactInfoTitle {
+        font-size: 2rem;
+    }
+
+    .contactInfoText {
+        font-size: 1rem;
+    }
+
+    .contactForm {
+        padding: 2.5rem;
+    }
+
+    .contactItem {
+        font-size: 1rem;
+    }
+
+    .contactIcon {
+        min-width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactInfoTitle {
+        font-size: 1.75rem;
+    }
+
+    .contactForm {
+        padding: 2rem;
+    }
+
+    .contactInfo {
+        padding: 0;
+    }
+}

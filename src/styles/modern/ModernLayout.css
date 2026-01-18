@@ -1,0 +1,465 @@
+/* Modern Layout Global Styles */
+.modernSection {
+    background-color: #000;
+    padding-left: 100px;
+    padding-bottom: 10rem;
+}
+
+.modernContainer {
+    margin: 0;
+    padding: 0 4rem;
+}
+
+.modernSectionHeader {
+    margin-bottom: 6rem;
+}
+
+.modernSectionLabel {
+    color: var(--color-primary);
+    letter-spacing: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.modernSectionTitle {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+/* Services Styles */
+.modernServicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.modernServiceCard {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    background-color: #111;
+}
+
+.modernServiceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+
+.modernServiceCard:hover .modernServiceImage {
+    opacity: 0.8;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.modernServiceContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    pointer-events: none;
+}
+
+.modernServiceIdentifier {
+    color: var(--color-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+.modernServiceTitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.modernServiceDescription {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.6;
+}
+
+/* Gallery Styles */
+.modernGalleryGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.modernGalleryItem {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+.modernGalleryItem:first-child {
+    height: 600px;
+}
+
+.modernGalleryImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.6);
+    transition: all 0.6s ease;
+}
+
+.modernGalleryItem:hover .modernGalleryImage {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.05);
+}
+
+.modernGalleryOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.modernGalleryItem:hover .modernGalleryOverlay {
+    transform: translateY(0);
+}
+
+.modernGalleryTitle {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.modernGalleryLocation {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Contact Styles */
+.modernContactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.modernContactTitle {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+}
+
+.modernContactInfo {
+    margin-bottom: 3rem;
+}
+
+.modernContactInfoItem {
+    margin-bottom: 2.5rem;
+}
+
+.modernContactInfoLabel {
+    color: var(--color-primary);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.modernContactInfoValue {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.modernContactForm {
+    padding-top: 4rem;
+}
+
+.modernFormGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modernInput {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.modernInput:focus {
+    border-color: var(--color-primary);
+}
+
+.modernTextarea {
+    resize: vertical;
+}
+
+.modernFormSuccess {
+    color: var(--color-primary);
+    padding: 1.5rem;
+    border: 1px solid var(--color-primary);
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+/* Footer Styles */
+.modernFooter {
+    background-color: #000;
+    padding-left: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modernFooterContent {
+    margin: 0;
+    padding: 4rem;
+}
+
+.modernFooterGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.modernFooterBrand {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.modernFooterDescription {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    max-width: 400px;
+}
+
+.modernFooterSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modernFooterLink {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.modernFooterLink:hover {
+    color: #fff;
+}
+
+.modernFooterBottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modernFooterCopyright {
+    color: #444;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.modernFooterLegal {
+    display: flex;
+    gap: 2rem;
+}
+
+.modernFooterLegalLink {
+    color: #444;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+
+    .modernSection,
+    .modernFooter {
+        padding-left: 0;
+        padding-top: 70px;
+    }
+
+    .modernContainer,
+    .modernFooterContent {
+        padding: 0 2rem;
+    }
+
+    .modernSectionTitle {
+        font-size: 3rem;
+    }
+
+    .modernContactTitle {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .modernSection {
+        padding-bottom: 6rem;
+    }
+
+    .modernContainer,
+    .modernFooterContent {
+        padding: 0 1.5rem;
+    }
+
+    .modernSectionHeader {
+        margin-bottom: 4rem;
+    }
+
+    .modernSectionTitle {
+        font-size: 2.5rem;
+    }
+
+    .modernServicesGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .modernServiceCard {
+        height: 400px;
+    }
+
+    .modernGalleryGrid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .modernGalleryItem,
+    .modernGalleryItem:first-child {
+        height: 300px;
+    }
+
+    .modernContactGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .modernContactTitle {
+        font-size: 2rem;
+    }
+
+    .modernContactForm {
+        padding-top: 2rem;
+    }
+
+    .modernFormGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .modernFooterGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .modernFooterBottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .modernFooterLegal {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .modernContainer,
+    .modernFooterContent {
+        padding: 0 1rem;
+    }
+
+    .modernSectionLabel {
+        font-size: 0.7rem;
+        letter-spacing: 4px;
+    }
+
+    .modernSectionTitle {
+        font-size: 2rem;
+    }
+
+    .modernServiceCard {
+        height: 350px;
+    }
+
+    .modernServiceContent {
+        padding: 2rem;
+    }
+
+    .modernServiceTitle {
+        font-size: 1.3rem;
+    }
+
+    .modernGalleryItem,
+    .modernGalleryItem:first-child {
+        height: 250px;
+    }
+
+    .modernGalleryOverlay {
+        padding: 2rem;
+    }
+
+    .modernGalleryTitle {
+        font-size: 1.4rem;
+    }
+
+    .modernContactTitle {
+        font-size: 1.75rem;
+    }
+
+    .modernContactInfoValue {
+        font-size: 1rem;
+    }
+
+    .modernInput {
+        padding: 1.25rem;
+    }
+
+    .modernFooterContent {
+        padding: 3rem 1rem;
+    }
+
+    .modernFooterBrand {
+        font-size: 1.5rem;
+    }
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Container from '../../ui/Container';
 import Section from '../../ui/Section';
 import Button from '../../ui/Button';
+import '../../../styles/modern/ModernLayout.css';
 
 const ModernContact = () => {
     const [formData, setFormData] = useState({
@@ -27,81 +28,62 @@ const ModernContact = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const inputStyle = {
-        width: '100%',
-        padding: '1.5rem',
-        backgroundColor: 'transparent',
-        border: 'none',
-        borderBottom: '1px solid rgba(255,255,255,0.2)',
-        color: '#fff',
-        fontSize: '1rem',
-        fontFamily: 'inherit',
-        outline: 'none',
-        transition: 'border-color 0.3s ease',
-        boxSizing: 'border-box'
-    };
-
     return (
-        <Section id="contact" style={{ backgroundColor: '#000', paddingLeft: '100px', paddingBottom: '10rem' }}>
-            <Container style={{ margin: 0, padding: '0 4rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '6rem', alignItems: 'start' }}>
+        <Section id="contact" className="modernSection">
+            <Container className="modernContainer">
+                <div className="modernContactGrid">
                     {/* Contact Info */}
                     <div>
-                        <span style={{ color: 'var(--color-primary)', letterSpacing: '8px', fontSize: '0.8rem', fontWeight: 'bold' }}>CONNECT</span>
-                        <h2 style={{ fontSize: '3.5rem', fontWeight: 900, color: '#fff', marginTop: '1rem', marginBottom: '3rem', lineHeight: 1.1 }}>
+                        <span className="modernSectionLabel">CONNECT</span>
+                        <h2 className="modernContactTitle">
                             LET'S BUILD<br />TOGETHER
                         </h2>
 
-                        <div style={{ marginBottom: '3rem' }}>
-                            <div style={{ marginBottom: '2.5rem' }}>
-                                <div style={{ color: 'var(--color-primary)', fontSize: '0.7rem', letterSpacing: '3px', marginBottom: '0.5rem' }}>LOCATION</div>
-                                <div style={{ color: '#fff', fontSize: '1.1rem' }}>123 Construction Ave<br />Builders City</div>
+                        <div className="modernContactInfo">
+                            <div className="modernContactInfoItem">
+                                <div className="modernContactInfoLabel">LOCATION</div>
+                                <div className="modernContactInfoValue">123 Construction Ave<br />Builders City</div>
                             </div>
-                            <div style={{ marginBottom: '2.5rem' }}>
-                                <div style={{ color: 'var(--color-primary)', fontSize: '0.7rem', letterSpacing: '3px', marginBottom: '0.5rem' }}>PHONE</div>
-                                <div style={{ color: '#fff', fontSize: '1.1rem' }}>(555) 123-4567</div>
+                            <div className="modernContactInfoItem">
+                                <div className="modernContactInfoLabel">PHONE</div>
+                                <div className="modernContactInfoValue">(555) 123-4567</div>
                             </div>
-                            <div>
-                                <div style={{ color: 'var(--color-primary)', fontSize: '0.7rem', letterSpacing: '3px', marginBottom: '0.5rem' }}>EMAIL</div>
-                                <div style={{ color: '#fff', fontSize: '1.1rem' }}>projects@elitebuild.com</div>
+                            <div className="modernContactInfoItem">
+                                <div className="modernContactInfoLabel">EMAIL</div>
+                                <div className="modernContactInfoValue">projects@elitebuild.com</div>
                             </div>
                         </div>
                     </div>
 
                     {/* Contact Form */}
-                    <form onSubmit={handleSubmit} style={{ paddingTop: '4rem' }}>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+                    <form onSubmit={handleSubmit} className="modernContactForm">
+                        <div className="modernFormGrid">
                             <input
                                 type="text"
                                 name="name"
                                 placeholder="YOUR NAME"
-                                style={inputStyle}
+                                className="modernInput"
                                 value={formData.name}
                                 onChange={handleChange}
-                                onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'}
-                                onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
                                 required
                             />
                             <input
                                 type="email"
                                 name="email"
                                 placeholder="YOUR EMAIL"
-                                style={inputStyle}
+                                className="modernInput"
                                 value={formData.email}
                                 onChange={handleChange}
-                                onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'}
-                                onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
                                 required
                             />
                         </div>
 
                         <select
                             name="projectType"
-                            style={{ ...inputStyle, marginBottom: '2rem', appearance: 'none' }}
+                            className="modernInput"
+                            style={{ marginBottom: '2rem', appearance: 'none' }}
                             value={formData.projectType}
                             onChange={handleChange}
-                            onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'}
-                            onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
                         >
                             <option>PROJECT TYPE</option>
                             <option>Single Dwelling</option>
@@ -113,23 +95,15 @@ const ModernContact = () => {
                             name="details"
                             rows="5"
                             placeholder="PROJECT DETAILS"
-                            style={{ ...inputStyle, marginBottom: '3rem', resize: 'vertical' }}
+                            className="modernInput modernTextarea"
+                            style={{ marginBottom: '3rem' }}
                             value={formData.details}
                             onChange={handleChange}
-                            onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'}
-                            onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
                             required
                         ></textarea>
 
                         {status === 'success' ? (
-                            <div style={{
-                                color: 'var(--color-primary)',
-                                padding: '1.5rem',
-                                border: '1px solid var(--color-primary)',
-                                textAlign: 'center',
-                                letterSpacing: '2px',
-                                fontSize: '0.9rem'
-                            }}>
+                            <div className="modernFormSuccess">
                                 ✓ MESSAGE SENT SUCCESSFULLY
                             </div>
                         ) : (

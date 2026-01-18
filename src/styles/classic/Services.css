@@ -49,3 +49,30 @@
     color: var(--color-text-muted);
     line-height: 1.6;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .serviceContent {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .serviceImageContainer {
+        height: 200px;
+    }
+
+    .serviceTitle {
+        font-size: 1.3rem;
+    }
+}

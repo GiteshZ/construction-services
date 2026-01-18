@@ -157,8 +157,77 @@ button {
   background-size: 1.5rem;
 }
 
-@media (max-width: 600px) {
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-padding {
+    padding: 2.5rem 0;
+  }
+}
+
+/* Button Touch Targets */
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Form Responsive Styles */
+@media (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Layout Toggle Button Responsive */
+.layout-toggle-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .layout-toggle-btn {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-toggle-btn {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
   }
 }

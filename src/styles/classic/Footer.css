@@ -28,3 +28,32 @@
     color: #475569;
     font-size: 0.85rem;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0;
+    }
+
+    .footerLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footerLink {
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2.5rem 0;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+}

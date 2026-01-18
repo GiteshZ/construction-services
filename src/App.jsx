@@ -57,22 +57,10 @@ const AppContent = () => {
       {/* Global Layout Toggle */}
       <button
         onClick={toggleLayout}
+        className="layout-toggle-btn"
         style={{
-          position: 'fixed',
-          bottom: '2rem',
-          right: '2rem',
-          zIndex: 9999,
-          padding: '0.75rem 1.5rem',
           backgroundColor: layout === 'classic' ? '#000' : '#fff',
-          color: layout === 'classic' ? '#fff' : '#000',
-          border: 'none',
-          borderRadius: '50px',
-          fontWeight: 'bold',
-          cursor: 'pointer',
-          boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.5)',
-          fontSize: '0.8rem',
-          textTransform: 'uppercase',
-          letterSpacing: '1px'
+          color: layout === 'classic' ? '#fff' : '#000'
         }}
       >
         Switch to {layout === 'classic' ? 'Modern' : 'Classic'}

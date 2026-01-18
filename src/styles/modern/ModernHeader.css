@@ -1,0 +1,197 @@
+/* Modern Header Styles */
+.modernNav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modernLogo {
+    position: absolute;
+    top: 2rem;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.modernNavLink {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: #fff;
+    text-decoration: none;
+    margin: 2rem 0;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.modernNavLink:hover {
+    opacity: 1;
+    color: var(--color-primary);
+}
+
+.modernNavDivider {
+    position: absolute;
+    bottom: 2rem;
+    width: 1px;
+    height: 60px;
+    background-color: var(--color-primary);
+}
+
+/* Mobile Hamburger */
+.modernHamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.modernHamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.modernHamburger span.active:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.modernHamburger span.active:nth-child(2) {
+    opacity: 0;
+}
+
+.modernHamburger span.active:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Navigation */
+.modernMobileNav {
+    display: none;
+}
+
+.modernMobileOverlay {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .modernNav {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        width: 100%;
+        height: 70px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modernLogo {
+        position: static;
+        z-index: 1001;
+    }
+
+    .modernNavLink {
+        display: none;
+    }
+
+    .modernNavDivider {
+        display: none;
+    }
+
+    .modernHamburger {
+        display: flex;
+    }
+
+    .modernMobileNav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 5rem 2rem 2rem;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .modernMobileNav.open {
+        right: 0;
+    }
+
+    .modernMobileNavList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .modernMobileLink {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 0;
+        transition: color 0.3s ease;
+        min-height: 44px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .modernMobileLink:hover {
+        color: var(--color-primary);
+    }
+
+    .modernMobileOverlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+}
+
+@media (max-width: 480px) {
+    .modernNav {
+        padding: 0 1rem;
+        height: 60px;
+    }
+
+    .modernLogo {
+        font-size: 1.2rem;
+    }
+
+    .modernMobileNav {
+        width: 80%;
+    }
+}

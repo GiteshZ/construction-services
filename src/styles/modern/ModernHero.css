@@ -1,0 +1,127 @@
+/* Modern Hero Styles */
+.modernHero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.modernHeroBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    mask-image: linear-gradient(to left, black, transparent);
+    -webkit-mask-image: linear-gradient(to left, black, transparent);
+}
+
+.modernHeroContent {
+    margin: 0;
+    padding-left: 4rem;
+    z-index: 1;
+    max-width: 1200px;
+}
+
+.modernHeroTitle {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    color: #fff;
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+}
+
+.modernHeroTitleOutline {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-primary);
+}
+
+.modernHeroSubtitle {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 450px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    border-left: 2px solid var(--color-primary);
+    padding-left: 1.5rem;
+}
+
+.modernHeroButton {
+    border-radius: 0;
+    padding: 1.5rem 3rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .modernHero {
+        padding-left: 0;
+        padding-top: 70px;
+    }
+
+    .modernHeroContent {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .modernHeroBg {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modernHero {
+        padding-top: 60px;
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .modernHeroContent {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .modernHeroBg {
+        width: 100%;
+        opacity: 0.2;
+        mask-image: linear-gradient(to bottom, transparent, black, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black, transparent);
+    }
+
+    .modernHeroSubtitle {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .modernHeroButton {
+        padding: 1.25rem 2.5rem;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modernHeroContent {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .modernHeroSubtitle {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .modernHeroButton {
+        padding: 1rem 2rem;
+        font-size: 0.75rem;
+    }
+}
