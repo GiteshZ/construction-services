@@ -56,7 +56,7 @@ const ProjectDetail = () => {
 
             <nav style={{ padding: '1.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <div className="container">
-                    <Link to="/" style={{ color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Link to="/#gallery" style={{ color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         ← Back to Portfolio
                     </Link>
                 </div>
