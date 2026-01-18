@@ -1,16 +1,55 @@
-# React + Vite
+# EliteBuild - Premium Construction Services Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EliteBuild is a sophisticated, high-performance React application designed for luxury construction firms. It showcases architectural excellence through a premium user interface, dynamic project storytelling, and seamless navigation.
 
-Currently, two official plugins are available:
+![Project Preview](https://images.unsplash.com/photo-1541888946425-d81bb19480c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Core Features
 
-## React Compiler
+### 🏢 Architectural Showcases
+- **Dynamic Project Pages**: Every project in the gallery has a dedicated, rich-content page detailing specifications, features, and architectural narratives.
+- **Client-Side Routing**: Powered by `react-router-dom` for instantaneous page transitions without full-page reloads.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎨 Premium User Experience
+- **Global Scroll Management**: Intelligent "Scroll-to-Top" logic ensures that navigating to new pages or returning home always starts at the optimal viewing position.
+- **Smooth Hash Navigation**: Advanced smooth-scrolling that handles anchor links (Services, Gallery, Contact) correctly across all application routes.
+- **Interactive Forms**: A modern, state-managed contact form with premium input field styling, focus effects, and real-time submission feedback.
 
-## Expanding the ESLint configuration
+### 📱 Fully Responsive Design
+- Optimized for all devices, from high-resolution desktop displays to professional mobile views, ensuring your brand looks elite on every screen.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technology Stack
+
+- **Framework**: [React](https://reactjs.org/) (Vite-powered)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **Styling**: Vanilla CSS with a custom-built Variable & Token system.
+- **Assets**: High-quality curated architectural imagery from Unsplash.
+- **Deployment**: [Netlify](https://www.netlify.com/) with SPA redirect support.
+
+## 📁 Project Structure
+
+```text
+src/
+├── assets/          # Local optimized images
+├── components/      # Modular UI components (Header, Gallery, Hero, etc.)
+├── data/            # Centralized project data store (ProjectData.js)
+└── App.jsx          # Application Shell & Route Configuration
+```
+
+## 🚀 Getting Started
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/GiteshZ/construction-services.git
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Launch the development server:**
+    ```bash
+    npm run dev
+    ```
+
+## 📝 License
+&copy; 2026 EliteBuild Construction Services. All rights reserved.
