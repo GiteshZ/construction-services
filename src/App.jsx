@@ -14,6 +14,11 @@ import ClassicProjectDetail from './components/classic/pages/ProjectDetail';
 // Modern Components
 import ModernHeader from './components/modern/layout/ModernHeader';
 import ModernHero from './components/modern/sections/ModernHero';
+import ModernServices from './components/modern/sections/ModernServices';
+import ModernGallery from './components/modern/sections/ModernGallery';
+import ModernContact from './components/modern/sections/ModernContact';
+import ModernFooter from './components/modern/layout/ModernFooter';
+import ModernProjectDetail from './components/modern/pages/ModernProjectDetail';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -35,9 +40,9 @@ const Home = () => {
   return (
     <>
       <ModernHero />
-      <div style={{ padding: '5rem 0 5rem 100px', textAlign: 'center', backgroundColor: '#000', color: '#fff' }}>
-        <p style={{ fontSize: '1.2rem', opacity: 0.5 }}>More modern sections coming soon...</p>
-      </div>
+      <ModernServices />
+      <ModernGallery />
+      <ModernContact />
     </>
   );
 };
@@ -79,11 +84,11 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route
           path="/project/:id"
-          element={layout === 'classic' ? <ClassicProjectDetail /> : <div>[Modern Project Detail Placeholder]</div>}
+          element={layout === 'classic' ? <ClassicProjectDetail /> : <ModernProjectDetail />}
         />
       </Routes>
 
-      {layout === 'classic' ? <ClassicFooter /> : <div style={{ color: 'white', padding: '4rem', textAlign: 'center' }}>[Modern Footer Placeholder]</div>}
+      {layout === 'classic' ? <ClassicFooter /> : <ModernFooter />}
     </div>
   );
 };
