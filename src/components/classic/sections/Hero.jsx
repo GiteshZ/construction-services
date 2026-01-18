@@ -1,9 +1,9 @@
 import React from 'react';
-import heroBg from '../../assets/hero_bg.png';
-import Container from '../ui/Container';
-import Button from '../ui/Button';
-import useSmoothScroll from '../../hooks/useSmoothScroll';
-import '../../styles/Hero.css';
+import heroBg from '../../../assets/hero_bg.png';
+import Container from '../../ui/Container';
+import Button from '../../ui/Button';
+import useSmoothScroll from '../../../hooks/useSmoothScroll';
+import '../../../styles/classic/Hero.css';
 
 const Hero = () => {
     const { scrollToPath } = useSmoothScroll();

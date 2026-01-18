@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { projects } from '../../data/ProjectData';
-import Container from '../ui/Container';
-import Section from '../ui/Section';
-import Button from '../ui/Button';
-import useSmoothScroll from '../../hooks/useSmoothScroll';
-import '../../styles/ProjectDetail.css';
+import { projects } from '../../../data/ProjectData';
+import Container from '../../ui/Container';
+import Section from '../../ui/Section';
+import Button from '../../ui/Button';
+import useSmoothScroll from '../../../hooks/useSmoothScroll';
+import '../../../styles/classic/ProjectDetail.css';
 
 const ProjectDetail = () => {
     const { id } = useParams();

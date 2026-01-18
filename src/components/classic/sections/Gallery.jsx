@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { projects } from '../../data/ProjectData';
-import Container from '../ui/Container';
-import Section from '../ui/Section';
-import '../../styles/Gallery.css';
+import { projects } from '../../../data/ProjectData';
+import Container from '../../ui/Container';
+import Section from '../../ui/Section';
+import '../../../styles/classic/Gallery.css';
 
 const Gallery = () => {
     return (

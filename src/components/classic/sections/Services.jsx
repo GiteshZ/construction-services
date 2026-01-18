@@ -1,8 +1,8 @@
 import React from 'react';
-import singleDwellingImg from '../../assets/single_dwelling.png';
-import Container from '../ui/Container';
-import Section from '../ui/Section';
-import '../../styles/Services.css';
+import singleDwellingImg from '../../../assets/single_dwelling.png';
+import Container from '../../ui/Container';
+import Section from '../../ui/Section';
+import '../../../styles/classic/Services.css';
 
 const Services = () => {
     const services = [
