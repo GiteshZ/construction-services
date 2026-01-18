@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Gallery from './components/Gallery';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import ProjectDetail from './components/ProjectDetail';
+import Header from './components/layout/Header';
+import Hero from './components/sections/Hero';
+import Services from './components/sections/Services';
+import Gallery from './components/sections/Gallery';
+import Contact from './components/sections/Contact';
+import Footer from './components/layout/Footer';
+import ProjectDetail from './components/pages/ProjectDetail';
 import ScrollToTop from './components/ScrollToTop';
 
 const Home = () => (

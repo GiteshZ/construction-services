@@ -1,0 +1,42 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.heroContent {
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.heroTitle {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.heroTitleAccent {
+    color: var(--color-primary);
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heroActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}

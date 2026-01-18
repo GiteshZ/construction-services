@@ -1,0 +1,30 @@
+.footer {
+    padding: 4rem 0;
+    background-color: #020617;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerContent {
+    text-align: center;
+}
+
+.footerLinks {
+    margin-bottom: 2rem;
+}
+
+.footerLink {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    margin: 0 1rem;
+}
+
+.footerLink:hover {
+    color: #fff;
+}
+
+.copyright {
+    color: #475569;
+    font-size: 0.85rem;
+}
