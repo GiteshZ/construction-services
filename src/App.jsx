@@ -17,10 +17,6 @@ import ModernHero from './components/modern/sections/ModernHero';
 
 import ScrollToTop from './components/ScrollToTop';
 
-const LayoutSwitcher = () => (
-  <Home />
-);
-
 const Home = () => {
   const { layout } = useLayout();
 

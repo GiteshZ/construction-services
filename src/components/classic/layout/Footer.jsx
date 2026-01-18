@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useSmoothScroll from '../../hooks/useSmoothScroll';
+import useSmoothScroll from '../../../hooks/useSmoothScroll';
 import Container from '../../ui/Container';
 import '../../../styles/classic/Footer.css';
 

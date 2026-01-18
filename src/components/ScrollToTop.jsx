@@ -5,15 +5,14 @@ const ScrollToTop = () => {
     const { pathname, hash } = useLocation();
 
     useEffect(() => {
+        // If there's a hash, let the browser or useSmoothScroll handle it
         if (hash) {
-            const id = hash.replace('#', '');
-            const element = document.getElementById(id);
+            const element = document.getElementById(hash.substring(1));
             if (element) {
-                setTimeout(() => {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
+                element.scrollIntoView({ behavior: 'smooth' });
             }
         } else {
+            // Otherwise scroll to top
             window.scrollTo(0, 0);
         }
     }, [pathname, hash]);
