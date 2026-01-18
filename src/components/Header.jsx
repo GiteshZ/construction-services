@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -11,6 +12,21 @@ const Header = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const scrollToPath = (e, path) => {
+        if (location.pathname === '/') {
+            e.preventDefault();
+            if (path === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (path.startsWith('/#')) {
+                const id = path.substring(2);
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    };
 
     const headerStyle = {
         position: 'fixed',
@@ -55,16 +71,16 @@ const Header = () => {
     return (
         <header style={headerStyle}>
             <div className="container" style={navStyle}>
-                <Link to="/" style={logoStyle}>
+                <Link to="/" style={logoStyle} onClick={(e) => scrollToPath(e, '/')}>
                     <span style={{ fontSize: '2rem' }}>🏗️</span>
                     <span>ELITE<span style={accentStyle}>BUILD</span></span>
                 </Link>
                 <nav>
                     <ul style={{ display: 'flex', alignItems: 'center' }}>
-                        <li><Link to="/" style={linkStyle}>Home</Link></li>
-                        <li><a href="/#services" style={linkStyle}>Services</a></li>
-                        <li><a href="/#contact" style={linkStyle}>Contact</a></li>
-                        <li><a href="/#contact" className="btn btn-primary" style={{ marginLeft: '2rem', padding: '0.5rem 1.25rem' }}>Get Quote</a></li>
+                        <li><Link to="/" style={linkStyle} onClick={(e) => scrollToPath(e, '/')}>Home</Link></li>
+                        <li><Link to="/#services" style={linkStyle} onClick={(e) => scrollToPath(e, '/#services')}>Services</Link></li>
+                        <li><Link to="/#contact" style={linkStyle} onClick={(e) => scrollToPath(e, '/#contact')}>Contact</Link></li>
+                        <li><Link to="/#contact" className="btn btn-primary" style={{ marginLeft: '2rem', padding: '0.5rem 1.25rem' }} onClick={(e) => scrollToPath(e, '/#contact')}>Get Quote</Link></li>
                     </ul>
                 </nav>
             </div>

@@ -7,6 +7,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetail from './components/ProjectDetail';
+import ScrollToTop from './components/ScrollToTop';
 
 const Home = () => (
   <>
@@ -20,6 +21,7 @@ const Home = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Header />
         <Routes>
